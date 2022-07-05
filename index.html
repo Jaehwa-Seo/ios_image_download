@@ -9,7 +9,10 @@
             var a = document.createElement("a");
             a.href = image.src;
             a.download = fileName;
-            a.click();
+            a.rel = 'noopener'
+            document.body.appendChild(a)
+            click(a);
+            document.body.removeChild(a)
         }
     </script>
 </body>
